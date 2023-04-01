@@ -49,4 +49,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'The Odin Project\'s Mini Message Board', messages: messages });
 });
 
+router.get('/new', function(req, res, next) {
+  res.render('form', { title: 'Add a new comment' });
+});
+
 module.exports = router;
