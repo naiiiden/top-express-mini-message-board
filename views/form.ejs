@@ -9,5 +9,12 @@
 </head>
 <body>
     <h1>Add a new comment</h1>
+    <form method="post" action="/new" style="display: flex; flex-direction: column; gap: .5rem; align-items: self-start;">
+        <label for="author">author</label>
+        <input type="text" name="author" id="author-input">
+        <label for="message">message</label>
+        <input type="text" name="message" id="message-input">
+        <input type="submit" value="add comment">
+    </form>
 </body>
 </html>
