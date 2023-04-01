@@ -54,7 +54,17 @@ router.get('/new', function(req, res, next) {
 });
 
 router.post('/new', function(req, res, next) {
-  messages.push({ text: req.body.message, user: req.body.author, added: new Date() });
+  messages.push({ 
+    text: req.body.message, 
+    user: req.body.author, 
+    added: new Date().toLocaleString('en-US', { 
+      year: 'numeric', 
+      month: 'short', 
+      day: 'numeric', 
+      hour: 'numeric', 
+      minute: 'numeric' 
+    }), 
+  });
   res.redirect('/');
 });
 
