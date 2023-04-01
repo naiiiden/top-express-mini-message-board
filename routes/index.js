@@ -53,4 +53,8 @@ router.get('/new', function(req, res, next) {
   res.render('form', { title: 'Add a new comment' });
 });
 
+router.post('/new', function(req, res, next) {
+  res.send(req.body);
+});
+
 module.exports = router;
