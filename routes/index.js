@@ -34,9 +34,19 @@ const messages = [
   },
 ];
 
+messages.forEach(message => {
+  message.added = message.added.toLocaleString('en-US', { 
+    year: 'numeric', 
+    month: 'short', 
+    day: 'numeric', 
+    hour: 'numeric', 
+    minute: 'numeric' 
+  });
+});
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'The Odin Project\'s Mini Message Board', messages: messages });
 });
 
 module.exports = router;
