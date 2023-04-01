@@ -7,6 +7,7 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <a href="/new" style="display:inline-block; margin: 1rem 0; padding: 1rem 2rem; border: 1px solid #00B7FF;">add new comment</a>
     <% if (messages.length > 0) { %>
       <% messages.forEach(message => { %>
           <div style="border: 2px dashed black; width: fit-content; padding: .5rem; margin: .5rem 0;">
@@ -17,6 +18,9 @@
       <% }) %>
     <% } else { %>
       <p>there are no messages to display...</p>
+    <% } %>
+    <% if (messages.length > 10) { %>
+      <a href="/new" style="display:inline-block; margin: 1rem 0; padding: 1rem 2rem; border: 1px solid #00B7FF;">add new comment</a>
     <% } %>
   </body>
 </html>
